@@ -1,4 +1,6 @@
 {
-  "versionCode": 2,
+  "versionCode": 2,  // Igual ao do build.gradle e version.json (Android Studio)
+  "versionName": "1.0.1",  // Mesmo nome de versão
   "downloadUrl": "https://github.com/LuigiBMacario/ProjectKO10/releases/download/Alpha/ProjectKO10.apk",
+  "inherit": true
 }
