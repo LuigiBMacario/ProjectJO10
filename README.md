@@ -1,7 +1,7 @@
 <h1>ProjectKO10</h1>
 <div style='border: 1px solid; border-color: #2F2F2F; border-radius: 3px; background-color: #2A2A2A; padding: 12px'>
   
-  >K = Kotlin<br>
+  >J = Java<br>
   >O = Omega (Ω) /Gaming Focused/<br>
   >10 = 1.0 /Base 1, version 0/
 
