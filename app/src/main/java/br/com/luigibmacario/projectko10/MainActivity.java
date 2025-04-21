@@ -5,6 +5,7 @@ import android.content.pm.PackageManager;
 import android.os.Bundle;
 
 import androidx.activity.EdgeToEdge;
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
@@ -16,6 +17,8 @@ import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.MotionEvent;
+
 import androidx.appcompat.app.AppCompatActivity;
 import org.json.JSONObject;
 import java.io.IOException;
@@ -27,13 +30,17 @@ import okhttp3.Response;
 
 public class MainActivity extends AppCompatActivity {
     private static final String UPDATE_URL = "https://raw.githubusercontent.com/LuigiBMacario/ProjectKO10/master/version.json";
-
+    private static Context gameContext;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
+        gameContext = this;
         setContentView(new GamePanel(this));
         checkForUpdate(this);
+    }
+    public static Context getGameContext(){
+        return gameContext;
     }
     private void checkForUpdate(Context context) {
         OkHttpClient client = new OkHttpClient();
@@ -44,12 +51,12 @@ public class MainActivity extends AppCompatActivity {
 
         client.newCall(request).enqueue(new Callback() {
             @Override
-            public void onFailure(Call call, IOException e) {
+            public void onFailure(@NonNull Call call, @NonNull IOException e) {
                 Log.e("UPDATE_CHECK", "Erro ao verificar atualização: " + e.getMessage());
             }
 
             @Override
-            public void onResponse(Call call, Response response) throws IOException {
+            public void onResponse(@NonNull Call call, @NonNull Response response) throws IOException {
                 if (response.body() != null) {
                     String jsonString = response.body().string();
                     try {
