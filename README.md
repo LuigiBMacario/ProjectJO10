@@ -6,7 +6,7 @@
   >10 = 1.0 /Base 1, version 0/
 
 <h2>About the Project:</h2>
-  <p>The Project Kotlin Omega 1.0, often refered as ProjectKO10, is a initial kotlin based game for android plataforms. It's objective is not to be release, but to be used for study and base for future Project K and KO projects.</p>
+  <p>The Project Kotlin Omega 1.0, often refered as ProjectKO10, is a initial kotlin based game for android plataforms. It's objective is not to be release, but to be used for study and base for future Project J and JO projects.</p>
 <div style='border: 1px solid; border-color: #2F2F2F; border-radius: 3px; background-color: #2A2A2A; padding: 12px'>
 <h2>What to Expect?</h2>
 <div style='border: 1px solid; border-color: #2F2F2F; border-radius: 3px; background-color: #2A2A2A; padding: 12px'>
